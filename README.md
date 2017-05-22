@@ -46,11 +46,13 @@ onComplete | function | function(){}
     }
 } )( jQuery );
 
-$( 'img.svg' ).toSVG( {
-    svgClass: "SVG",
-    onComplete: function ( data ) {
-        console.log( data )
-            // data возвращает уже вставленный в документ елемент svg
-    }
-} );
+$( document ).ready( function () {
+    $( 'img.svg' ).toSVG( {
+        svgClass: "SVG",
+        onComplete: function ( data ) {
+            console.log( data )
+                // data возвращает уже вставленный в документ елемент svg
+        }
+    } );
+});
 ```
