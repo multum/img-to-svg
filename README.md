@@ -11,7 +11,7 @@ svgClass | string | replaced-svg
 onComplete | function | function(){} 
 
 ```javascript
-// ToSVG plugin to replace the img tag with inline svg
+// ToSVG plugin to replace the img tag with inline svg by vereschak@gmail.com
 ( function ( $ ) {
     $.fn.toSVG = function ( options ) {
         var params = $.extend( {
