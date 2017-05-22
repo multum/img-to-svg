@@ -1,4 +1,5 @@
 # jQuery ToSVG
+[![N|Solid](https://www.wysiwygwebbuilder.com/images/SVGImage.jpg)](https://www.w3schools.com/html/html5_svg.asp)
 
 ### Плагин для замены тега img на inline svg
 
