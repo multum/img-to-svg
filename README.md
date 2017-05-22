@@ -45,12 +45,11 @@ onComplete | function | function(){}
     }
 } )( jQuery );
 
-$( document ).ready( function () {
-    $( 'img.svg' ).toSVG( {
-        svgClass: "SVG",
-        onComplete: function ( data ) {
-            console.log( data )
-        }
-    } );
-});
+$( 'img.svg' ).toSVG( {
+    svgClass: "SVG",
+    onComplete: function ( data ) {
+        console.log( data )
+            // data возвращает уже вставленный в документ елемент svg
+    }
+} );
 ```
