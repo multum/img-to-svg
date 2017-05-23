@@ -40,7 +40,7 @@ onComplete | function | function(){}
                     $svg.attr( 'viewBox', '0 0 ' + $svg.attr( 'height' ) + ' ' + $svg.attr( 'width' ) )
                 }
                 $img.replaceWith( $svg );
-                typeof params.onComplete == "function" ? params.onComplete.call( this, data ) : '';
+                typeof params.onComplete == "function" ? params.onComplete.call( this, $svg ) : '';
             } )
         } );
     }
