@@ -33,7 +33,7 @@ onComplete | function | function(){}
                     $svg = $svg.attr( 'id', imgID );
                 }
                 if ( typeof imgClass !== 'undefined' ) {
-                    $svg = $svg.attr( 'class', imgClass + params.svgClass );
+                    $svg = $svg.attr( 'class', imgClass + " " + params.svgClass );
                 }
                 $svg = $svg.removeAttr( 'xmlns:a' );
                 if ( !$svg.attr( 'viewBox' ) && $svg.attr( 'height' ) && $svg.attr( 'width' ) ) {
