@@ -3,7 +3,7 @@
 
 ## Плагин для замены тега img на inline svg
 
-## Settings
+### Settings
 
 Option | Type | Default 
 ------ | ---- | ------- 
