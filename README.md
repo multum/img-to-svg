@@ -1,14 +1,18 @@
 # jQuery ToSVG
 [![N|Solid](https://www.wysiwygwebbuilder.com/images/SVGImage.jpg)](https://www.w3schools.com/html/html5_svg.asp)
 
-### Плагин для замены тега img на inline svg
+## Плагин для замены тега img на inline svg
 
-### Settings
+## Settings
 
 Option | Type | Default 
 ------ | ---- | ------- 
 svgClass | string | replaced-svg 
 onComplete | function | function(){} 
+
+
+
+## Версия плагина с использованием jQuery
 
 ```javascript
 
@@ -58,7 +62,8 @@ $( document ).ready( function () {
 });
 ```
 
-### Либо вы можете получить вашу svg без jQuery
+
+### Вы также можете получить вашу svg без jQuery:
 
 ```javascript
 
@@ -129,5 +134,20 @@ $( document ).ready( function () {
     svgClass: "replaced",
     onComplete: function() {}
 });
+
+
+
 ```
 
+
+
+### Минифицированная версия плагина на чистом javascript для вставки тегом script в HTML(до начала загрузки jQuery):
+
+``` javascript
+!function(){String.prototype.toSVG=function(t){var e=function(t,e){if("object"!=typeof e)return!1;for(var r in t){if(e.hasOwnProperty(r))break;e[r]=t[r]}return e}({svgClass:"replaced-svg",onComplete:function(){}},t),r=function(t,e){var r=new XMLHttpRequest;r.open("GET",t,!0),r.send(),r.onreadystatechange=function(){4==r.readyState&&(200!=r.status?console.log(r.status+": "+r.statusText):e.call(this,r.responseText))}};Array.prototype.forEach.call(document.querySelectorAll(this),function(t){var i=t,n=i.getAttribute("id"),o=i.getAttribute("class"),s=i.getAttribute("src");/\.(svg)$/i.test(s)?r(s,function(t){var r=document.createElement("html");r.innerHTML="<body>"+t+"</body>";var s=r.getElementsByTagName("svg")[0];void 0!=n&&null!=n&&s.setAttribute("id",n),void 0!==o&&s.setAttribute("class",o+" "+e.svgClass),s.removeAttribute("xmlns:a"),!s.getAttribute("viewBox")&&s.getAttribute("height")&&s.getAttribute("width")&&s.getAttribute("viewBox","0 0 "+s.getAttribute("height")+" "+s.getAttribute("width")),i.parentNode.replaceChild(s,i),"function"==typeof e.onComplete&&e.onComplete.call(this,s)}):console.warn("image src='"+s+"' is not a SVG, item remained tag <img/> ")})}}();
+
+".svg".toSVG({
+    svgClass: "replaced",
+    onComplete: function() {}
+});
+```
