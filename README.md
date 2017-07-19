@@ -12,7 +12,7 @@ onComplete | function | function(){}
 
 
 
-## Инициализация плагина с использованием jQuery(подключив img-to-svg-jq.js)
+### Инициализация плагина с использованием jQuery(подключив img-to-svg-jq.js)
 
 ```javascript
 $( document ).ready( function () {
